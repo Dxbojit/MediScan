@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCOS Detection - MediScan</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="src/css/detection.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <script src="js/transition.js"></script>
+</head>
+<body>
+  <div class="page-transition-overlay"></div>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="src/assets/logo.jpeg" alt="MediScan Logo" id="logo-placeholder">
+          <h1>MediScan</h1>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About PCOS</a></li>
+            <li><a href="index.html#contact">Treatment</a></li>
+            <li><a href="detection.html" class="active">Detection</a></li>
+          </ul>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="detection-hero">
+    <div class="container">
+      <h1>PCOS Detection Tool</h1>
+      <p>Upload your X-ray image for analysis by our advanced AI detection model.</p>
+    </div>
+  </section>
+
+  <section class="detection-container">
+    <div class="container">
+      <div class="detection-card">
+        <div class="upload-section" id="uploadSection">
+          <h2>Upload X-ray Image</h2>
+          <p>For accurate results, please ensure your X-ray image is clear and in JPG, PNG, or DICOM format.</p>
+          
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">
+              <img src="src/assets/upload-icon.png" alt="Upload Icon" id="upload-icon-placeholder">
+            </div>
+            <p>Drag and drop your X-ray image here</p>
+            <p>or</p>
+            <label for="fileInput" class="btn btn-secondary">Browse Files</label>
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <p class="file-requirements">Maximum file size: 10MB</p>
+          </div>
+          
+          <div class="upload-preview" id="uploadPreview">
+            <h3>Image Preview</h3>
+            <div class="preview-container">
+              <img id="previewImage" src="" alt="Preview">
+            </div>
+            <div class="file-info">
+              <p id="fileName">No file selected</p>
+              <p id="fileSize"></p>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-outline" id="changeFileBtn">Change File</button>
+              <button class="btn btn-primary" id="analyzeBtn">Analyze Image</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="processing-section" id="processingSection">
+          <h2>Processing Your Image</h2>
+          <div class="processing-animation">
+            <div class="spinner"></div>
+          </div>
+          <p>Please wait while our AI analyzes your X-ray image...</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <p id="progressStatus">Initializing analysis...</p>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+          <h2>Detection Results</h2>
+          <div class="result-header">
+            <div class="result-status" id="resultStatus">
+              <!-- Will be populated by JavaScript -->
+            </div>
+            <div class="result-date" id="resultDate">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+          
+          <div class="result-details">
+            <div class="detection-metrics">
+              <h3>Analysis Confidence</h3>
+              <div class="metric">
+                <div class="metric-label">Confidence Score:</div>
+                <div class="metric-value" id="confidenceScore">N/A</div>
+              </div>
+              <div class="confidence-bar">
+                <div class="confidence-fill" id="confidenceFill"></div>
+              </div>
+            </div>
+            
+            <div class="detection-interpretation">
+              <h3>Analysis Results</h3>
+              <p id="interpretationText">
+                <!-- Will be populated by JavaScript -->
+              </p>
+              <div class="interpretation-notes" id="additionalNotes">
+                <!-- Will be populated by JavaScript -->
+              </div>
+            </div>
+            
+            <div class="action-recommendation">
+              <h3>Next Steps</h3>
+              <div class="recommendation" id="recommendationText">
+                <!-- Will be populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="result-actions">
+            <button class="btn btn-primary" id="newAnalysisBtn">New Analysis</button>
+          </div>
+          
+          <div class="disclaimer">
+            <p><strong>Important Disclaimer:</strong> This tool is intended for educational and informational purposes only. It is not a replacement for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any medical concerns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="src/assets/logo.jpeg" alt="MediScan Logo" id="footer-logo-placeholder-detection">
+          <h3>MediScan</h3>
+          <p>Advanced medical diagnostics powered by AI</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detection.html">Detection</a></li>
+            <li><a href="index.html#about">About PCOS</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: debojitbh.slg@gmail.com</p>
+          <p>Patel Niwas,Katwa - 700056</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediScan. All rights reserved.</p>
+        <div class="footer-social">
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/main.js"></script>
+  <script src="src/js/detection.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediScan - PCOS Detection</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<script src="js/transition.js"></script>
+<body>
+  <div class="page-transition-overlay"></div>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="src/assets/logo.jpeg" alt="MediScan Logo" id="logo-placeholder">
+          <h1>MediScan</h1>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About PCOS</a></li>
+            <li><a href="#treatment" class="nav-link">Treatment</a></li>
+            <li><a href="detection.html" class="nav-link">Detection</a></li>
+          </ul>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Advanced PCOS Detection Using AI</h1>
+        <p>Upload your X-ray images for quick and accurate Polycystic Ovary Syndrome detection powered by machine learning.</p>
+        <a href="detection.html" class="btn btn-primary">Start Detection</a>
+      </div>
+      <div class="hero-image">
+        <video width="640" height="360" autoplay muted loop>
+          <source src="src/assets/8328049-uhd_3840_2160_25fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+      </div>
+      
+      </div>     
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="feature-cards">
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">1</div>
+          <h3>Upload X-ray</h3>
+          <p>Securely upload your medical X-ray image through our platform.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">2</div>
+          <h3>AI Analysis</h3>
+          <p>Our advanced ML model analyzes the image for PCOS indicators.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">3</div>
+          <h3>View Results</h3>
+          <p>Receive detailed detection results with interpretation guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <h2>Understanding PCOS</h2>
+        <p>Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have infrequent or prolonged menstrual periods or excess male hormone (androgen) levels.</p>
+        <p>Early detection is crucial for managing symptoms and preventing long-term complications. Our AI-powered detection tool analyzes X-ray images to identify potential indicators of PCOS.</p>
+        <div class="info-box">
+          <h3>Common Symptoms</h3>
+          <ul>
+            <li>Irregular menstrual cycles</li>
+            <li>Excess androgen levels</li>
+            <li>Polycystic ovaries</li>
+            <li>Weight gain</li>
+            <li>Skin issues</li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-image">
+        <video width="1040" height="680" autoplay muted loop>
+          <source src="src/assets/11922052_2160_3840_24fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+        <!-- <img src="https://img.freepik.com/free-vector/woman-health-illustration_23-2148898164.jpg" alt="PCOS Illustration"> -->
+      </div> 
+    </div>
+  </section>
+
+  <section class="treatment" id="treatment">
+    <div class="container">
+      <div class="treatment-grid">
+        <div class="treatment-card">
+          <img src="src/assets/pexels-cottonbro-4047042.jpg" alt="Lifestyle Changes">
+          <h3>Lifestyle Changes</h3>
+          <ul>
+            <li>Regular exercise</li>
+            <li>Balanced nutrition</li>
+            <li>Weight management</li>
+            <li>Stress reduction</li>
+          </ul>
+        </div>
+        <div class="treatment-card">
+          <img src="src/assets/pexels-pixabay-208541.jpg" alt="Medical Treatment">
+          <h3>Medical Treatment</h3>
+          <ul>
+            <li>Hormone therapy</li>
+            <li>Ovulation medication</li>
+            <li>Anti-androgen medicines</li>
+            <li>Regular monitoring</li>
+          </ul>
+        </div>
+        <div class="treatment-card">
+          <img src="src/assets/pexels-pavel-danilyuk-7108319.jpg" alt="Support System">
+          <h3>Support System</h3>
+          <ul>
+            <li>Regular check-ups</li>
+            <li>Counseling services</li>
+            <li>Support groups</li>
+            <li>Family education</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Try Our PCOS Detection Tool?</h2>
+      <p>Get accurate results within minutes by uploading your X-ray image.</p>
+      <a href="detection.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="src/assets/logo.jpeg" alt="MediScan Logo" id="footer-logo-placeholder">
+          <h3>MediScan</h3>
+          <p>Advanced medical diagnostics powered by AI</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detection.html">Detection</a></li>
+            <li><a href="#about">About PCOS</a></li>
+            <li><a href="#treatment">Treatment</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediScan. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="mailto:debojitbh.slg@gmail.com" class="social-icon" title="Send Email">
+            <img src="src/assets/mail.jpg" title="debojitbh.slg@gmail.com"/>
+          </a>          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>

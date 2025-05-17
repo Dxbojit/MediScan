@@ -1,0 +1,459 @@
+/* Detection Page Specific Styles */
+
+.detection-hero {
+  padding: calc(var(--header-height) + var(--spacing-lg)) var(--spacing-lg) var(--spacing-lg);
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+.detection-hero h1, .detection-hero p {
+  color: white;
+}
+
+.detection-container {
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+}
+
+.detection-card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Upload Section */
+.upload-section, .processing-section, .results-section {
+  padding: var(--spacing-xl);
+  display: none;
+}
+
+.upload-section {
+  display: block; /* Initially visible */
+}
+
+.upload-area {
+  margin-top: var(--spacing-lg);
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  text-align: center;
+  background-color: var(--bg-light);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.upload-area:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-color);
+}
+
+.upload-area.dragover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-color);
+}
+
+.upload-icon {
+  margin-bottom: var(--spacing-md);
+}
+
+.upload-icon img, #upload-icon-placeholder {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  padding: var(--spacing-md);
+}
+
+.file-requirements {
+  margin-top: var(--spacing-md);
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.upload-preview {
+  display: none;
+  margin-top: var(--spacing-xl);
+}
+
+.preview-container {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  margin: var(--spacing-md) 0;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+/* Processing Section */
+.processing-animation {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 8px solid var(--primary-light);
+  border-top: 8px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-light);
+  border-radius: 4px;
+  margin: var(--spacing-lg) 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease;
+}
+
+#progressStatus {
+  text-align: center;
+  color: var(--text-medium);
+}
+
+/* Results Section */
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--bg-gray);
+}
+
+.result-status {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.result-status.positive {
+  color: var(--error-color);
+}
+
+.result-status.negative {
+  color: var(--success-color);
+}
+
+.result-date {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.result-images {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.original-image, .analyzed-image {
+  flex: 1;
+}
+
+.original-image img, .analyzed-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--bg-gray);
+}
+
+.detection-metrics {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.metric-label {
+  font-weight: 500;
+}
+
+.confidence-bar {
+  height: 8px;
+  background-color: var(--bg-gray);
+  border-radius: 4px;
+  margin-top: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  width: 0;
+  transition: width 1s ease;
+}
+
+.detection-interpretation {
+  margin-bottom: var(--spacing-lg);
+}
+
+.interpretation-notes {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+.action-recommendation {
+  margin-bottom: var(--spacing-xl);
+}
+
+.recommendation {
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.result-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  background-color: var(--bg-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+}
+
+/* Responsive Styles for Detection Page */
+@media (max-width: 768px) {
+  .result-images {
+    flex-direction: column;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .detection-card {
+    border-radius: var(--border-radius-md);
+  }
+  
+  .upload-section, .processing-section, .results-section {
+    padding: var(--spacing-lg);
+  }
+  
+  .upload-area {
+    padding: var(--spacing-lg);
+  }
+  
+  .preview-container {
+    height: 200px;
+  }
+  /* Add these styles to your detection.css file */
+
+.gyno-finder-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.gyno-finder-section h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.gyno-results {
+  margin-top: 1rem;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.spinner-small {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gyno-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gyno-cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.gyno-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gyno-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gyno-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.gyno-header h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.gyno-rating {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  color: #ffc107;
+  margin-right: 0.25rem;
+  font-size: 0.9rem;
+  letter-spacing: -1px;
+}
+
+.rating-value {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.gyno-specialty {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.gyno-address {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0;
+}
+
+.gyno-distance {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0 1rem 0;
+}
+
+.gyno-contact {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.btn-small {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.gyno-contact .btn-outline {
+  flex: 1;
+  max-width: 80px;
+}
+
+.gyno-contact .btn-secondary {
+  flex: 2;
+}
+
+.error-message {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-secondary);
+}
+
+.gyno-disclaimer {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+}
