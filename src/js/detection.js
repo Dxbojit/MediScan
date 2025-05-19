@@ -163,7 +163,7 @@ function initializeDetectionPage() {
     formData.append('file', file);
     
     // Call the backend API
-    const API_BASE_URL = 'http://localhost:5000';
+    const API_BASE_URL = 'https://mediscan-backend-u60e.onrender.com';
     fetch(`${API_BASE_URL}/predict`, {
       method: 'POST',
       body: formData
