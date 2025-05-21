@@ -1,8 +1,6 @@
 {
-    "cleanUrls": true,
-    "rewrites": [
-      { "source": "/", "destination": "/index.html" },
-      { "source": "/detection", "destination": "/detection.html" }
-    ]
-  }
-  
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/detection", "destination": "/detection.html" }
+  ]
+}
